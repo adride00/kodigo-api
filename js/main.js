@@ -2,22 +2,40 @@ let container = document.querySelector('.pokemons')
 let nevegacion = document.querySelector('.numeros')
 
 const URL = 'https://pokeapi.co/api/v2/pokemon/'
+let nextLink = ''
+let prevLink = ''
 
+const next = () => {
+  getPokemons(nextLink)
+}
+
+const prev = () => {
+  getPokemons(prevLink)
+}
 const getPokemons = async (url) => {
     const response = await fetch(url)
     const data = await response.json()
     const { results, next, previous } = data
-    // console.log(results)
-    return { results }
+    
+    nextLink = next
+    prevLink = previous
+  
+    showPokemons(results)
+    // return { results }
 }
 
-const showPokemons = async () => {
-    const {results} = await getPokemons(`${URL}?offset=0&limit=20`)
-    results.map(item => {
+
+
+const showPokemons = async (array) => {
+  limpiarContenedor()
+
+    array.map(item => {
       
       fetch(item.url)
       .then(response => response.json())  
       .then(data => {
+       
+        
         renderCard(data)
       })
       .catch(error => console.log(error))
@@ -47,5 +65,9 @@ const renderCard = (pokemon) => {
     `
     card.innerHTML += cardPokemon
 }
+const limpiarContenedor = () => {
 
-showPokemons()
+  container.innerHTML = ''
+}
+
+getPokemons(`${URL}?offset=0&limit=40`)
