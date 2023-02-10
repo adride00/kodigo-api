@@ -1,3 +1,22 @@
-nav{
-  background-color: #a492c2;
+nav, .color-primario{
+  background-color: #4c3769;
 }
+
+.nav-item {
+  margin-left: .5rem;
+  transition: all .3s ease-in-out;
+}
+
+.nav-item:hover {
+  color: #DE8F30;
+}
+
+.nav-link{
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+.nav-link:hover{
+  color: #DE8F30;
+}
+
