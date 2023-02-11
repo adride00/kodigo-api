@@ -7,14 +7,14 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>Kodigo Apis</title>
   </head>
   <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="img/logo.png" alt="" width="auto" height="30px"><span class="text-uppercase fs-3 text-light">api</span>
+          <img src="../img/Marvel_Logo.png" alt="" width="auto" height="30px">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -22,30 +22,60 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-lg-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/gatos.html">Api Gatos</a>
+              <a class="nav-link" href="gatos.html">Api Gatos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/rick.html">Rick and Morty</a>
+              <a class="nav-link" href="rick.html">Rick and Morty</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/pokeon.html">Pokemon</a>
+              <a class="nav-link" href="pokemon.html">Pokemon</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/marvel.html">Marvel</a>
+              <a class="nav-link" href="marvel.html">Marvel</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/movies.html">Movies</a>
+              <a class="nav-link" href="movies.html">Movies</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <main class="pt-5">
-      <h1>Seccion inicio</h1>
+    <main class="pt-5 container-fluid bg-dark">
+      <section aria-label="Page navigation example" class="justify-content-center row">
+          <div class="page-item col-1 text-center w-5 d-sm-inline-flex h-25 ms-auto me-auto">
+            <a class="page-link" href="#" aria-label="Previous" onclick="prev()">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </div>
+          <ul class="pagination justify-content-center col-2 numeros ">
+<!--             
+            
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+        
+               -->
+          </ul>
+          <div class="page-item col-1 text-center w-5 d-sm-inline-flex h-25 ms-auto me-auto">
+            <a class="page-link" href="#" aria-label="Next" onclick="next(event)">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </div>
+          <!-- cards -->
+          <div class="container ">
+            <div class="row row-cols-1 row-cols-md-4 g-4 pokemons ">
+              
+              
+              
+            </div>
+          </div>
+          
+
+      </section>
     </main>
 
     <footer class="bg-dark">
@@ -57,6 +87,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     
-    <script src="js/main.js"></script>
+    <script src="../js/marvel.js"></script>
   </body>
 </html>
