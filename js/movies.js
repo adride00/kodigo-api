@@ -11,6 +11,7 @@ const next = () => {
 }
 
 const prev = () => {
+  if(numeroPagina === 1) return
   getPokemons(URL + '&page=' + (numeroPagina - 1))
 }
 const getPokemons = async (url) => {
