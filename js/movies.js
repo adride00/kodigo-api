@@ -5,12 +5,13 @@ const URL = 'https://api.themoviedb.org/3/trending/all/day?api_key=' + API_KEY
 const pathImage = 'https://image.tmdb.org/t/p/w300'
 
 let numeroPagina = 1
+
 const next = () => {
-  getPokemons(nextLink)
+  getPokemons(URL + '&page=' + (numeroPagina + 1))
 }
 
 const prev = () => {
-  getPokemons(prevLink)
+  getPokemons(URL + '&page=' + (numeroPagina - 1))
 }
 const getPokemons = async (url) => {
     const response = await fetch(url)
